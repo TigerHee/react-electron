@@ -1,14 +1,21 @@
-## create-react-app与electron构建桌面应用
+## create-react-app与electron构建桌面应用脚手架
 
 ### 启动方式：
 
 ```
-npm run dev
+
+// 开发模式启动
+npm run dev 或 yarn dev
+
+pack 安装完毕后的文件
+dist 安装包
+
 ```
 
 ### 主要用到的包
 
 ```
+
 // 判断electron是否为开发环境
 electron-is-dev 
 
@@ -20,4 +27,12 @@ wait-on
 
 // 解决跨平台设置环境变量
 cross-env
+
+// 为生产环境build代码
+electron-builder
+
 ```
+
+### create-react-app 各种配置
+
+请参考： [tiger-react-cli](https://github.com/TigerHee/tiger-react-cli)

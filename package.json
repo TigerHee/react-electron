@@ -1,7 +1,12 @@
 {
-  "name": "my-app",
+  "name": "react-electron",
   "version": "0.1.0",
   "main": "main.js",
+  "author": {
+    "name": "tigerHee",
+    "email": "316031602@qq.com"
+  },
+  "repository": "https://github.com/TigerHee/react-electron",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -16,7 +21,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"wait-on http://localhost:3000 && electron .\" \"cross-env BROWSER=none npm start\""
+    "dev": "concurrently \"wait-on http://localhost:3000 && electron .\" \"cross-env BROWSER=none npm start\"",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "tigerHee appId",
+    "productName": "electron脚手架",
+    "copyright": "Copyright © 2019 ${author}"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,6 +49,7 @@
     "concurrently": "^5.0.1",
     "cross-env": "^6.0.3",
     "electron": "^7.1.5",
+    "electron-builder": "^21.2.0",
     "electron-is-dev": "^1.1.0",
     "wait-on": "^3.3.0"
   }
