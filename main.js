@@ -10,6 +10,7 @@ const isDev = require('electron-is-dev')
 let mainWindow
 
 app.on('ready', () => {
+  require('devtron').install
   mainWindow = new BrowserWindow({
     width: 1024,
     height: 680,
@@ -21,4 +22,7 @@ app.on('ready', () => {
     ? 'http://localhost:3000'
     : `file://${path.join(__dirname, './build/index.html')}`
   mainWindow.loadURL(urlLocation)
+  if(isDev){
+    mainWindow.webContents.openDevTools()
+  }
 })
